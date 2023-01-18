@@ -1,0 +1,126 @@
+/* GERAL */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+/* CORPO */
+
+body {
+    background-image: url(../img/background.png); /* Imagem do meu background */
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+#corpo {
+    max-width: 450px;
+    margin: 3rem auto;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px 5px #70110f;
+    text-align: center;
+}
+
+ .grow:hover {
+
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: .5s linear;
+} 
+
+.grow:not(:hover) {
+
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    transition: .5s linear;
+} 
+
+/* BOTÃO */
+
+button {
+    background-color: #fff;
+    color: #70110f;
+    border: 2px solid #70110f;
+    padding: .3rem .6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s linear;
+}
+
+button:hover {
+    background-color: #70110f;
+    color: #fff
+}
+
+button:hover > i {
+    color: #fff;
+}
+
+button i {
+    color: #70110f;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+#enviar {
+    display: flex;
+}
+
+/* CUSTOMIZAÇÃO INPUT */
+
+form {
+    width: 100%;
+    max-width: 350px;
+}
+
+div.input-single {
+    width: 100%;
+    margin: 30px 0;
+    position: relative;
+}
+
+div.input-single label {
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    color: rgb(150, 150, 150);
+    cursor: text;
+    transition: .5s ease-in-out;
+}
+
+div.input-single .input {
+    width: 100%;
+    padding: 5px;
+    color: rgb(150, 150, 150);
+    border: 0;
+    border-bottom: 2px solid rgb(200, 200, 200);
+    outline: 0;
+    font-size: 16px;
+}
+
+div.input-single .input:focus,
+div.input-single .input:valid {
+    border-bottom: 2px solid #70110f;
+}
+
+div.input-single .input:focus ~ label,
+div.input-single .input:valid ~ label {
+    transform: translateY(-24px);
+    font-size: 12px;
+    color: #70110f;
+}
